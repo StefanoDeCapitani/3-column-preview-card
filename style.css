@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/*font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;*/
+
+:root{
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+  --very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+  height: 100vh;
+
+  background: var(--very-light-gray);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.container{
+  height: 80%;
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+main div.card{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+img.icon{
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+main div.card:nth-of-type(1){
+  background: var(--bright-orange);
+}
+
+main div.card:nth-of-type(2){
+  background: var(--dark-cyan);
+}
+
+main div.card:nth-of-type(3){
+  background: var(--very-dark-cyan);
+}
+
+h1{
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 40px;
+  margin: 10px 0px;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+p{
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--transparent-white);
+  line-height: 30px;
+  width: 23ch;
+}
+
+button.learn_more{
+  margin-top: auto;
+  width: 60%;
+  border-radius: 40px;
+  padding: 0px;
+  font-family: 'Lexend Deca', sans-serif;
+  border: 1px solid var(--very-light-gray);
+  background: var(--very-light-gray);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+main div.card:nth-of-type(1) button.learn_more{
+  color: var(--bright-orange);
+}
+
+main div.card:nth-of-type(2) button.learn_more{
+  color: var(--dark-cyan);
+}
+
+main div.card:nth-of-type(3) button.learn_more{
+  color: var(--very-dark-cyan);
+}
+
+main div.card button.learn_more:hover{
+  background: none;
+  color: var(--very-light-gray);
+}
+
+footer{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.attribution {
+  font-size: 11px;
+  font-family: 'Lexend Deca', sans-serif;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width: 400px){
+  body{
+    height: 100%;
+  }
+
+  main.container{
+    width: 90%;
+    flex-direction: column;
+    margin: 100px 0px;
+  }
+
+  main div.card{
+    padding: 50px 40px;
+    height: 450px;
+  }
+}
